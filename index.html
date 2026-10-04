@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Yuting 的创意个人作品集：把教育、实习与作品放进一辆会移动的购物篮。" />
+    <title>YUTING / PORTFOLIO CART</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23f4473d'/%3E%3Cpath d='M15 23h34l-4 27H19zM23 23c0-7 3-11 9-11s9 4 9 11' fill='none' stroke='%23fff8ef' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css?v=marketing-portfolio" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="wordmark" href="#top" aria-label="回到首页">
+        <span class="wordmark-mark">Y</span>
+        <span>YUTING<br /><em>PORTFOLIO CART</em></span>
+      </a>
+      <nav class="topnav" aria-label="页面导航">
+        <a href="#story">ABOUT</a>
+        <a href="#works">WORKS</a>
+        <a href="#receipt">CONTACT</a>
+      </nav>
+      <div class="basket-status" aria-live="polite">
+        <span class="status-dot"></span>
+        <span><strong id="basketCount">0</strong> / 07 IN CART</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-intro">
+          <p class="kicker">A PORTFOLIO YOU CAN PICK UP</p>
+          <h1>把我的经历<br /><span>放进购物车。</span></h1>
+          <p class="hero-copy">向下滚动，在两侧货架里挑选你想了解的我。教育、实习、作品和技能，都可以被抓取，装进中间这只红色篮子。</p>
+          <div class="scroll-cue"><span class="scroll-wheel"></span><span>SCROLL TO SHOP</span></div>
+        </div>
+
+        <div class="experience-grid" id="works">
+          <aside class="item-rail item-rail-left" aria-label="左侧经历货架">
+            <article class="item-card card-yellow" draggable="true" data-title="教育背景" data-code="01">
+              <div class="card-topline"><span>01 / EDUCATION</span><span class="card-sticker">NEW</span></div>
+              <div class="card-visual visual-book"><span>M.A.</span><i></i><b></b></div>
+              <h2>教育背景</h2>
+              <p>中国传媒大学 · 艺术管理硕士<br />湖南师范大学 · 文化产业管理本科</p>
+              <div class="card-bottom"><button class="detail-button" type="button" data-detail="education">查看详情</button><button class="add-button" type="button">加入篮子</button></div>
+            </article>
+
+            <article class="item-card card-blue offset-card" draggable="true" data-title="实习经历" data-code="02">
+              <div class="card-topline"><span>02 / INTERNSHIP</span><span class="card-sticker">PICK</span></div>
+              <div class="card-visual visual-window"><span>MKT</span><div></div><div></div></div>
+              <h2>实习经历</h2>
+              <p>娱乐营销 · 品牌营销 · 内容运营<br />名创优品 / 美团 / 新东方 / 湖南卫视</p>
+              <div class="card-bottom"><button class="detail-button" type="button" data-detail="internship">查看详情</button><button class="add-button" type="button">加入篮子</button></div>
+            </article>
+
+            <article class="item-card card-green" draggable="true" data-title="个人技能" data-code="07">
+              <div class="card-topline"><span>07 / SKILLS</span><span class="card-sticker">TOOLS</span></div>
+              <div class="card-visual visual-tools"><span>Ai</span><span>Ps</span><span>AI</span></div>
+              <h2>个人技能</h2>
+              <p>营销策划 · 内容传播 · 数据复盘<br />Adobe / Office / AI 工具</p>
+              <div class="card-bottom"><button class="detail-button" type="button" data-detail="skills">查看详情</button><button class="add-button" type="button">加入篮子</button></div>
+            </article>
+          </aside>
+
+          <div class="cart-stage" id="cartStage" aria-label="作品购物篮，拖拽卡片到这里收集">
+            <div class="stage-label"><span>THE CART</span><span>DROP YOUR PICKS HERE</span></div>
+            <div class="basket-frame">
+              <div class="basket-glow"></div>
+              <img src="./assets/red-basket-hand.png" alt="一只由动漫小手抓住把手的红色购物篮" />
+              <div class="basket-tickets" id="basketTickets" aria-live="polite"></div>
+              <div class="basket-count"><strong id="basketCountCenter">0</strong><span>COLLECTED</span></div>
+            </div>
+            <p class="drop-hint">点击卡片上的按钮<br />或直接拖进篮子</p>
+          </div>
+
+          <aside class="item-rail item-rail-right" aria-label="右侧作品货架">
+            <article class="item-card card-coral" draggable="true" data-title="学术与研究" data-code="03">
+              <div class="card-topline"><span>03 / RESEARCH</span><span class="card-sticker">LOOK</span></div>
+              <div class="card-visual visual-poster"><span>R&amp;D</span><i></i><b></b></div>
+              <h2>学术与研究</h2>
+              <p>从红色文化资源到媒介传播分析，<br />用研究把问题讲清楚。</p>
+              <div class="card-bottom"><button class="detail-button" type="button" data-detail="research">查看详情</button><button class="add-button" type="button">加入篮子</button></div>
+            </article>
+
+            <article class="item-card card-purple offset-card" draggable="true" data-title="文化创意产出" data-code="05">
+              <div class="card-topline"><span>05 / CREATIVE OUTPUT</span><span class="card-sticker">HOT</span></div>
+              <div class="card-visual visual-spark"><span>↯</span><i></i><b></b></div>
+              <h2>文化创意产出</h2>
+              <p>品牌、包装、展览与内容传播，<br />把文化内容转成可感知的体验。</p>
+              <div class="card-bottom"><button class="detail-button" type="button" data-detail="creative">查看详情</button><button class="add-button" type="button">加入篮子</button></div>
+            </article>
+
+            <article class="item-card card-orange" draggable="true" data-title="兴趣培育" data-code="08">
+              <div class="card-topline"><span>08 / INTERESTS</span><span class="card-sticker">OPEN</span></div>
+              <div class="card-visual visual-heart"><span>HI!</span><i>♥</i></div>
+              <h2>兴趣培育</h2>
+              <p>艺术表演 · 钢琴 · 展览现场，<br />保持观察，也保持表达。</p>
+              <div class="card-bottom"><button class="detail-button" type="button" data-detail="interest">查看详情</button><button class="add-button" type="button">加入篮子</button></div>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section class="story-section" id="story">
+        <div class="section-index">01 / ABOUT THE SHOPPER</div>
+        <div class="story-content">
+          <p class="kicker">A LITTLE RECEIPT ABOUT ME</p>
+          <h2>ABOUT ME!<br /><span>PICK ME!</span></h2>
+          <div class="story-evaluations">
+            <section class="story-evaluation">
+              <h3>工作能力</h3>
+              <p>我不是只负责“想点子”的人，更喜欢把一个想法从“听起来不错”推进到“真的落地”。面对复杂任务，我会先拆清目标、受众和节奏，再把内容、视觉、沟通、执行和复盘一件件接起来。对我来说，执行力不是把事情做完，而是让每个环节都更靠近结果。</p>
+            </section>
+            <section class="story-evaluation">
+              <h3>创意能力</h3>
+              <p>我习惯从日常里捡灵感：一场展览、一段对话、一个包装细节，甚至一张不经意拍下的照片，都可能成为下一个创意的起点。我喜欢把文化、品牌和人的真实感受连接起来，让创意不只是“好看”，还要有故事、有情绪，也能被别人记住。</p>
+            </section>
+            <section class="story-evaluation">
+              <h3>AI学习能力</h3>
+              <p>我把 AI 当作一个反应很快、但需要被监督的搭档。它可以帮我做资料聚合、思路发散、结构梳理和视觉 Demo，但最终的判断、筛选和表达仍然要由我完成。面对新工具，我上手比较快，也愿意持续试错；我更在意的不是“会不会用”，而是能不能用它把问题想得更清楚、把工作做得更有效率。</p>
+            </section>
+          </div>
+          <a class="text-link" href="#receipt">查看购物小票 <span>↘</span></a>
+        </div>
+        <div class="story-graphic" aria-hidden="true"><span>GOOD<br />IDEAS<br />INSIDE</span><i></i><b></b></div>
+      </section>
+
+      <section class="receipt-section" id="receipt">
+        <div class="receipt-head">
+          <div>
+            <div class="section-index">02 / YOUR PICKS</div>
+            <h2>购物小票 <span>/</span> <em id="receiptCount">0</em> 件已选</h2>
+          </div>
+          <p>把感兴趣的经历放进篮子后，<br />这里会生成一张小小的浏览清单。</p>
+        </div>
+        <div class="receipt-paper">
+          <div class="receipt-brand"><span>YUTING’S</span><strong>PORTFOLIO MARKET</strong></div>
+          <div class="receipt-list" id="receiptList"><p class="empty-receipt">还没有挑选商品。回到上面，开始逛逛吧。</p></div>
+          <div class="receipt-total"><span>READY TO TALK?</span><strong>LET’S MAKE SOMETHING MEMORABLE.</strong></div>
+          <div class="receipt-contact"><a href="mailto:1497122814@qq.com">1497122814@qq.com</a><span>CHINA / OPEN TO OPPORTUNITIES</span></div>
+        </div>
+      </section>
+    </main>
+    <dialog class="detail-dialog" id="detailDialog" aria-labelledby="detailTitle">
+      <div class="detail-dialog-inner">
+        <div class="detail-dialog-topline"><span id="detailCode">01 / EDUCATION</span><button class="dialog-close" id="dialogClose" type="button" aria-label="关闭详情">×</button></div>
+        <h2 id="detailTitle">教育背景</h2>
+        <div class="detail-body" id="detailBody"></div>
+      </div>
+    </dialog>
+    <footer class="footer"><span>© 2024 YUTING</span><span>DESIGNED TO BE PICKED UP</span><a href="#top">BACK TO TOP ↑</a></footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>
